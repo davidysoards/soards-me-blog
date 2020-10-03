@@ -1,0 +1,32 @@
+{
+  "name": "11ty-tailwind-starter",
+  "license": "ISC",
+  "version": "1.1.0",
+  "description": "",
+  "author": "David Soards",
+  "scripts": {
+    "start": "npm run watch",
+    "build": "rm -rf dist && npm-run-all build:css build:html",
+    "build:html": "cross-env NODE_ENV=production eleventy",
+    "build:css": "cross-env NODE_ENV=production postcss src/site/_includes/css/tailwind.css -o src/site/css/styles.css",
+    "watch": "npm-run-all --parallel watch:css watch:html",
+    "watch:html": "eleventy --serve --port=8888",
+    "watch:css": "postcss src/site/_includes/css/tailwind.css -o src/site/css/styles.css --watch"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^0.10.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
+    "cssnano": "^4.1.10",
+    "html-minifier": "^4.0.0",
+    "luxon": "^1.25.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.2",
+    "postcss-import": "^12.0.1",
+    "postcss-nested": "^4.2.3",
+    "tailwindcss": "^1.8.10",
+    "terser": "^4.8.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2"
+  }
+}
