@@ -1,18 +1,17 @@
 ---
-title: "Make a custom night mode toggle w/React & CSS Variables"
-description: "Duck Duck Beet needed a way for their customers to order online and a homepage that would clearly explain their unique business to new customers. Woocommerce and Vector Art to the rescue."
-date: "2019-08-25T00:00:00.000Z"
-categories:
+title: Make a custom night mode toggle w/React & CSS Variables
+description: This post is the first in a short series where I will detail the things I learned while designing and...
+date: 2019-08-25T19:48:09.455Z
+mainImage: always-open-night-and-day.png
+tags:
+  - post
   - react
   - css
   - javascript
   - darkmode
-
-published: true
-canonicalLink: https://blog.prototypr.io/building-an-ecommerce-website-for-a-farm-to-table-business-ec3e541302a4
+layout: post
+canonicalLink: https://dev.to/ninjasoards/make-a-custom-night-mode-toggle-w-react-css-variables-272o
 ---
-
-# Make a custom night mode toggle w/React & CSS Variables
 
 This post is the first in a short series where I will detail the things I learned while designing and developing a website to promote AIGA Louisville's annual Design Week. Please have a look and let me know what you think in the comments.
 
@@ -29,6 +28,7 @@ I also believe that the best method is often the simplest method and using CSS v
 Alright, now onto the fun stuff.
 
 ## The CSS Variables
+
 Step one is to set the CSS variables on the root in the global CSS file so they can be accessed anywhere in the DOM (or in this case the virtual DOM).
 
 Because I'm attempting to "partially" support IE11 for this project, I'm using fallbacks by first setting the element directly to a hex code and then overriding that with the variable. The override will be ignored by any browser that doesn't support CSS variables.
@@ -73,7 +73,6 @@ a {
 
 With the variables set globally in the CSS, new values can be assigned as needed using JavaScript. I started by creating two color theme objects -- lightTheme & darkTheme -- inside my main layout.js component.
 
-
 ```jsx
 // layout.js
 import './layout.css';
@@ -96,7 +95,6 @@ const darkTheme = {
   '--color-neon-fill': '#FFFEFC',
   '--color-neon-glow': '#d99fff',
 };
-
 ```
 
 Up first, inside the component, there are 2 useState hooks. One to set the mode and one to toggle the switch.
@@ -106,7 +104,6 @@ Next, a useEffect hook loops over the values in the chosen mode object and assig
 A second useEffect checks localStorage upon page load for a 'mode' item set to 'dark'. If this item is found it toggles to dark mode. For this hook the 2nd argument is an empty array, which means the effect will be run only once on the initial load of the page (similar to how ComponentDidMount works in class components).
 
 The toggleTheme function updates the checked status to the opposite of what it is currently set to and switches the mode from 'dark' to 'light' or 'light' to 'dark'. It also sets the 'mode' item inside localStorage to the new mode.
-
 
 ```jsx
 // layout.js
@@ -153,14 +150,12 @@ import Header from './header';
 
 return (
   <div className="site">
-    <Header
-      toggleTheme={toggleTheme}
-      isChecked={isChecked}
-    />
+    <Header toggleTheme={toggleTheme} isChecked={isChecked} />
     <main>{children}</main>
   </div>
 );
 ```
+
 ```jsx
 // header.js
 import ToggleSwitch from './ToggleSwitch';
@@ -172,7 +167,7 @@ import ToggleSwitch from './ToggleSwitch';
   isChecked={isChecked}
   id="mode"
   ariaLabel="dark mode toggle"
-/>
+/>;
 ```
 
 > A toggle is just a checkbox with some CSS magic applied to it. 🧙‍♂️
@@ -210,7 +205,7 @@ As you can see I'm using CSS-in-JS 🙀 via the @emotion/styled library. If you 
 
 To use styled-components, you simple rename your HTML tags to whatever makes sense semantically, and then define which native HTML elements your new tags should use with the CSS for each element inside back-ticks. The API supports nesting similar to SCSS, and the styles are **SCOPED TO THE COMPONENT!**
 
-Personally, I love how semantic and simple this makes my JSX markup. No more jamming 14 different classnames onto every element ala Bootstrap or writing disgusting classnames like "header__toggle-switch--dark-mode" ala BEM.
+Personally, I love how semantic and simple this makes my JSX markup. No more jamming 14 different classnames onto every element ala Bootstrap or writing disgusting classnames like "header\_\_toggle-switch--dark-mode" ala BEM.
 
 ```jsx
 const Toggle = styled.div`
@@ -272,6 +267,7 @@ const Slider = styled.span`
   }
 `;
 ```
+
 The CSS variable can then be assigned to any element and the colors will change upon clicking the toggle switch.
 
 The variables can be assigned globally...

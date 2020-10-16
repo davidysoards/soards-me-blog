@@ -1,14 +1,10 @@
 ---
 layout: default
-pageTitle: Page Title
+title: Home
 ---
-<div class="container">
-  <h1>{{ title }}</h1>
-  <h2>This is global data: {{siteData.hello}}</h2>
-  <ul>
-    {# {%- for item in items %} #}
-    <li>Item</li>
-    {# {%- endfor %} #}
-  </ul>
-</div>
-
+<h1>{{ siteData.blogTitle }}</h1>
+<ul>
+  {%- for post in collections.post %}
+    <li><a href="{{ post.url }}">{{ post.data.title }}</li>
+  {%- endfor %}
+</ul>

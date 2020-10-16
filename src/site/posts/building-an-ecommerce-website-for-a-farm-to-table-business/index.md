@@ -1,15 +1,15 @@
 ---
-title: 'Building an Ecommerce Website for a Farm to Table Business'
-description: 'Duck Duck Beet needed a way for their customers to order online and a homepage that would clearly explain their unique business to new customers. Woocommerce and Vector Art to the rescue.'
-date: '2017-11-01T18:21:39.438Z'
-categories:
-  - Design
-  - Illustration
-  - User Experience
-  - Ecommerce
-  - WordPress
-
-published: true
+title: Building an Ecommerce Website for a Farm to Table Business
+description: Duck Duck Beet needed a way for their customers to order online and a homepage that would clearly explain their unique business to new customers. Woocommerce and Vector Art to the rescue.
+date: 2017-11-01T18:21:39.438Z
+tags:
+  - post
+  - design
+  - illustration
+  - ux
+  - ecommerce
+  - wordPress
+layout: post
 canonicalLink: https://blog.prototypr.io/building-an-ecommerce-website-for-a-farm-to-table-business-ec3e541302a4
 ---
 

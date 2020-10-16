@@ -1,6 +1,20 @@
-# Easy Headless Wordpress with Nuxt & Netlify part III
+---
+title: Easy Headless Wordpress with Nuxt & Netlify part III
+description: Deploying with Netlify and adding a build hook to our CMS
+date: 2020-09-16T21:50:30.483Z
+mainImage: wp-nuxt-netlify.png
+tags:
+  - post
+  - wordpress
+  - vue
+  - nuxt
+  - netlify
+layout: post
+canonicalLink: https://dev.to/ninjasoards/easy-headless-wordpress-with-nuxt-netlify-part-iii-341j
+---
 
 ## Part 3 - Deploying on Netlify
+
 [Part 1](https://dev.to/ninjasoards/easy-headless-wordpress-with-nuxt-netlify-5c4a) deals with **setting up Wordpress** as a Headless CMS.
 
 [Part 2](https://dev.to/ninjasoards/easy-headless-wordpress-with-nuxt-netlify-part-ii-4ab) covers **Vue, Nuxt and Tailwind**.
@@ -12,6 +26,7 @@ Moving the **local Wordpress install** that we worked on in Part 1 **to a live U
 Once your CMS is live you will need to **change the axios** `baseURL` in the Nuxt config.
 
 #### nuxt.config.js
+
 ```js
 axios: {
   baseURL: 'http://yourlivesite.com',

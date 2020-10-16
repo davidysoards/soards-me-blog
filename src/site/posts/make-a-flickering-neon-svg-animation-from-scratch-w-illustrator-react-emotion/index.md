@@ -1,9 +1,17 @@
 ---
-layout: default
-pageTitle: Make a flickering Neon SVG animation from scratch w/ Illustrator, React & Emotion
+title: Make a flickering Neon SVG animation from scratch w/ Illustrator, React & Emotion
+description: This is Part 2 in a short series where I am detailing the things I learned while designing and develo...
+date: 2019-09-03T12:06:05.309Z
+mainImage: always-open-night.png
+tags:
+  - post
+  - react
+  - css
+  - svg
+  - animation
+layout: post
+canonicalLink: https://dev.to/ninjasoards/make-a-flickering-neon-svg-animation-from-scratch-w-illustrator-react-emotion-39gm
 ---
-
-# Make a flickering Neon SVG animation from scratch w/ Illustrator, React & Emotion
 
 This is Part 2 in a short series where I am detailing the things I learned while designing and developing a website to promote AIGA Louisville's annual Design Week.
 

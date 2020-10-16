@@ -1,15 +1,13 @@
 ---
-title: 'Designing the Comic Creator Mobile App'
-description: 'The first step in creating a page of sequential art is to draw what is called a thumbnail. A thumbnail is a small image that shows the basic panel layout of a page and the general placements of the…'
-date: '2017-08-14T19:01:00.974Z'
-categories:
-  - UX
-  - Design Process
-  - Design Thinking
-  - User Experience
-  - Comics
-
-published: true
+title: Designing the Comic Creator Mobile App
+description: The first step in creating a page of sequential art is to draw what is called a thumbnail. A thumbnail is a small image that shows the basic panel layout of a page and the general placements of the…
+date: 2017-08-14T19:01:00.974Z
+tags:
+  - post
+  - ux
+  - design
+  - comics
+layout: post
 canonicalLink: https://blog.prototypr.io/designing-the-comic-creator-mobile-app-27b39ac74099
 ---
 

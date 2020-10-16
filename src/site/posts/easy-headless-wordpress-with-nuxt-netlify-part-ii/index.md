@@ -1,6 +1,19 @@
-# Easy Headless Wordpress with Nuxt & Netlify part II
-
+---
+title: Easy Headless Wordpress with Nuxt & Netlify part II
+description: Vue, Nuxt and Tailwind
+date: 2020-09-15T13:56:31.279Z
+mainImage: wp-nuxt-netlify.png
+tags:
+  - post
+  - wordpress
+  - vue
+  - nuxt
+  - netlify
+layout: post
+canonicalLink: https://dev.to/ninjasoards/easy-headless-wordpress-with-nuxt-netlify-part-ii-4ab
+---
 ## Part 2 - Nuxt & Tailwind
+
 [Part 1](https://dev.to/ninjasoards/easy-headless-wordpress-with-nuxt-netlify-5c4a) deals with **setting up Wordpress** as a Headless CMS.
 
 [Part 3](https://dev.to/ninjasoards/easy-headless-wordpress-with-nuxt-netlify-part-iii-341j) covers **deploying with Netlify** and adding a **build hook** to our CMS.
@@ -8,13 +21,14 @@
 Now that the JSON API endpoints are setup, the data from our Wordpress posts and media files can be **queried, manipulated and rendered to static HTML files** using Vue and Nuxt.
 
 ### Create Nuxt App
+
 Start a **brand new nuxt project** from the command line with
 
 `npx create-nuxt-app wp-nuxt`
 
 For purposes of this demo **use the following settings:**
 
-```
+```powershell
 ? Project name: wp-nuxt
 ? Programming language: JavaScript
 ? Package manager: Npm
@@ -28,13 +42,12 @@ For purposes of this demo **use the following settings:**
 ```
 
 With this configuration, and if you are using VS Code, I recommend **placing the following in your workspaces's** `.vscode/settings.json` to avoid conflicts between prettier, eslint, and Vetur and to correctly **enable auto formatting of code on save.**
+
 #### settings.json
+
 ```json
 {
-  "prettier.disableLanguages": [
-    "javascript",
-    "vue"
-  ],
+  "prettier.disableLanguages": ["javascript", "vue"],
   "[javascript]": {
     "editor.formatOnSave": false
   },
@@ -44,18 +57,16 @@ With this configuration, and if you are using VS Code, I recommend **placing the
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "eslint.validate": [
-    "javascript",
-    "vue"
-  ],
+  "eslint.validate": ["javascript", "vue"],
   "vetur.validation.template": false,
-  "css.validate": false,
+  "css.validate": false
 }
 ```
 
 Nuxt gives you **access to Vuex** (Vue's state management library) **out-of-the-box**. Navigate to the `store/` directory and create a new file `index.js`. Most of our data fetching and manipulation will take place in this file.
 
 #### store/index.js
+
 ```js
 export const state = () => ({
   events: [],
@@ -108,7 +119,9 @@ Navigate to `http://headless.local/wp-json/wp/v2/events?page=1&per_page=100&_emb
 ### Fetching Data
 
 Back in your Nuxt repo in the Vuex store **add a mutation** for updating the `events` array, **and an async action** for fetching the events data.
+
 #### store/index.js
+
 ```js
 export const mutations = {
   SET_EVENTS: (state, events) => {
@@ -121,7 +134,9 @@ export const actions = {
     // if events is already set, stop
     if (state.events.length) return;
     try {
-      let events = await this.$axios.$get(`/wp-json/wp/v2/events?page=1&per_page=100&_embed=1`);
+      let events = await this.$axios.$get(
+        `/wp-json/wp/v2/events?page=1&per_page=100&_embed=1`
+      );
       // filter out unnecessary data
       events = events.map(({ id, slug, title, content, acf }) => ({
         id,
@@ -136,14 +151,16 @@ export const actions = {
     }
   },
 };
-
 ```
+
 The `@nuxtjs/axios` **module** that was installed when we ran `create-nuxt-app` gives us access to `this.$axios`.
 
 Using `$get` gives immediate access to the data and **doesn't require** the usual `.then(res => res.data)` at the end of the call, which is a pretty cool feature IMO.
 
 Before this will work as is though, we have to **add our `baseURL` to the `axios` object** in the nuxt config file.
+
 #### nuxt.config.js
+
 ```js
 axios: {
   baseURL: 'http://headless.local',
@@ -151,8 +168,10 @@ axios: {
 ```
 
 Now we **call the action in the created hook** of a component.
+
 #### index.vue
-```vue
+
+```js
 <script>
 import { mapState, mapActions } from 'vuex';
 export default {
@@ -174,8 +193,11 @@ export default {
 Alternatively, you could access the Vuex state and actions with `this.$store.state.events` and `this.$store.dispatch('getEvents')`, but I **prefer to use the Vuex map helpers** because it looks cleaner and shows in one place all of the global state and actions that are being used in a particular component.
 
 ### Run Server Side
+
 In order to **make sure our fetch request runs on the server** when we are generating our static HTML, we can add a Nuxt plugin. Create a file called `data.server.js` inside the `plugins/` directory.
+
 #### plugins/data.server.js
+
 ```js
 export default async ({ store }) => {
   await store.dispatch('getEvents');
@@ -183,7 +205,9 @@ export default async ({ store }) => {
 ```
 
 And **add the plugin** to your nuxt config.
+
 #### nuxt.config.js
+
 ```js
 plugins: ['~/plugins/data.server.js'],
 ```
@@ -191,8 +215,10 @@ plugins: ['~/plugins/data.server.js'],
 ### Render to the page
 
 Now we can use the data in the **component's template.**
+
 #### index.vue
-```vue
+
+```js
 <template>
   <div class="max-w-screen-lg mx-auto p-10">
     <div v-for="(event, index) in events" :key="event.id">
@@ -241,17 +267,23 @@ If you've **followed along** until this point you should have **something that r
 But what if we need to **show the events in order by date.** For that we can use a **getter**, which I think of as a computed property for Vuex state.
 
 #### store/index.js
+
 ```js
 export const getters = {
   sortedEvents: (state) => {
-    return state.events.slice().sort((a, b) => new Date(a.acf.start_time) - new Date(b.acf.start_time));
+    return state.events
+      .slice()
+      .sort((a, b) => new Date(a.acf.start_time) - new Date(b.acf.start_time));
   },
 };
 ```
+
 Because the `sort` method **mutates the original array**, unlike `map`, `filter`, or `reduce`, I'm first using the `slice` method with no arguments to **create a shallow copy** and then sorting the copy.
 
 Now add the following to your component:
+
 #### index.vue
+
 ```diff
 - import { mapState, mapActions } from 'vuex';
 + import { mapState, mapGetters, mapActions } from 'vuex';
@@ -268,7 +300,9 @@ export default {
   },
 };
 ```
+
 And in the template:
+
 ```diff
 - <div v-for="(event, index) in events" :key="event.id">
 
@@ -278,7 +312,9 @@ And in the template:
 For a little more **control over the format** of our start and end **times**, install the **date-fns** nuxt module with `npm i @nuxtjs/date-fns`.
 
 Then add `@nuxtjs/date-fns` to the build modules in your nuxt config, and **import the methods you will be using**. Being able to **import only the functions you require** is a huge performance advantage of date-fns over something like moment.js. This example only requires 1 method - `format`. For more info on date-fns check out the [docs](https://date-fns.org/docs/Getting-Started).
+
 #### nuxt.config.js
+
 ```diff
 buildModules: [
   '@nuxtjs/tailwindcss',
@@ -288,8 +324,11 @@ dateFns: {
   methods: ['format'],
 },
 ```
+
 Now we can use `$dateFns` methods directly in our templates like so:
+
 #### index.vue
+
 ```diff
 - {{ event.acf.start_time }} - {{ event.acf.end_time }}
 + {{ $dateFns.format(new Date(event.acf.start_time), 'E h') }} - {{ $dateFns.format(new Date(event.acf.end_time), 'haaaaa') }}

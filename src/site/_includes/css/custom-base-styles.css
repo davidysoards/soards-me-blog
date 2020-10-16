@@ -3,20 +3,24 @@ body {
 }
 
 h1 {
-  @apply text-5xl;
-  @apply font-bold;
+  @apply text-5xl font-bold leading-tight mb-8;
 }
 
 h2 {
-  @apply text-4xl;
-  @apply font-bold;
+  @apply text-4xl font-bold leading-tight mb-2;
 }
 
 h3 {
-  @apply text-2xl;
-  @apply font-bold;
+  @apply text-2xl font-bold leading-tight mt-6 mb-1;
 }
 
 a {
   @apply text-blue-700;
+}
+
+header,
+footer {
+  a {
+    @apply text-white;
+  }
 }
