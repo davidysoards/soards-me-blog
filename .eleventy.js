@@ -4,6 +4,7 @@ const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 module.exports = function (eleventyConfig) {
   // Layout aliases
   eleventyConfig.addLayoutAlias('default', 'layouts/base.njk');
+  eleventyConfig.addLayoutAlias('post', 'layouts/post.njk');
 
   // Minify js files
   eleventyConfig.addFilter('jsmin', (code) => {
