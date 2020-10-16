@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<h1>{{ title }}</h1>
+
+{{ content | safe }}
+
+<ul class="mt-8 pb-4">
+  {%- set previousPost = collections.post | getPreviousCollectionItem(page) %}
+  {%- if previousPost %}<li>Previous: <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></li>{% endif %}
+  {%- set nextPost = collections.post | getNextCollectionItem(page) %}
+  {%- if nextPost %}<li>Next: <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a></li>{% endif %}
+</ul>
