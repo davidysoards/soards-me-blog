@@ -36,16 +36,16 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
 
   // Pass thru static files
-  eleventyConfig.addPassthroughCopy('./src/site/fonts');
-  eleventyConfig.addPassthroughCopy('./src/site/images');
   eleventyConfig.addPassthroughCopy('./src/site/css');
+  eleventyConfig.addPassthroughCopy('./src/site/img');
+  // eleventyConfig.addPassthroughCopy('./src/site/fonts');
 
   return {
     dir: {
       input: 'src/site',
       output: 'dist',
     },
-    templateFormats: ['njk', 'md'],
+    templateFormats: ['njk', 'md', 'jpg', 'png'],
     htmlTemplateEngine: 'njk',
     markdownTemplateEngine: false,
   };

@@ -30,6 +30,9 @@ module.exports = {
       // screens: {
       //   2xl: '1536px',
       // },
+      maxWidth: {
+        text: '65ch',
+      },
     },
   },
   variants: {

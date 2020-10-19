@@ -1,9 +1,13 @@
 ---
 layout: default
 ---
-<h1>{{ title }}</h1>
+<div class="p-4">
+  <h1>{{ title }}</h1>
+</div>
 
-{{ content | safe }}
+<div class="max-w-text mx-auto p-4">
+  {{ content | safe }}
+</div>
 
 <ul class="mt-8 pb-4">
   {%- set previousPost = collections.post | getPreviousCollectionItem(page) %}

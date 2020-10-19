@@ -1,11 +1,13 @@
 module.exports = {
   blogTitle: 'blog.soards',
   currentYear: new Date().getFullYear(),
-  title: 'soards.blog',
-  url: 'https://example.com/',
-  description: 'I am writing about my experiences as a naval navel-gazer.',
+  title: 'blog.soards.me',
+  url: 'https://blog.soards.me/',
+  description:
+    'A blog about web development, design, and whatever else I feel like writing about.',
   feed: {
-    subtitle: 'I am writing about my experiences as a naval navel-gazer.',
+    subtitle:
+      'A blog about web development, design, and whatever else I feel like writing about.',
     filename: 'feed.xml',
     path: '/feed/feed.xml',
     id: 'https://example.com/',
@@ -15,9 +17,9 @@ module.exports = {
     url: 'https://example.com/feed/feed.json',
   },
   author: {
-    name: 'Your Name Here',
-    email: 'youremailaddress@example.com',
-    url: 'https://example.com/about-me/',
+    name: 'David Soards',
+    email: 'davidysoards@gmail.com',
+    url: 'https://soards.me/about/',
   },
 };
 
