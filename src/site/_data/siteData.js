@@ -1,7 +1,6 @@
 module.exports = {
-  blogTitle: 'blog.soards',
-  currentYear: new Date().getFullYear(),
   title: 'blog.soards.me',
+  currentYear: new Date().getFullYear(),
   url: 'https://blog.soards.me/',
   description:
     'A blog about web development, design, and whatever else I feel like writing about.',
