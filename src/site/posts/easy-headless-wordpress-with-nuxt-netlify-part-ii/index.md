@@ -1,5 +1,6 @@
 ---
-title: Easy Headless Wordpress with Nuxt & Netlify part II
+title: Easy Headless Wordpress with Nuxt & Netlify II
+subtitle: Nuxt & Tailwind
 description: Vue, Nuxt and Tailwind
 date: 2020-09-15T13:56:31.279Z
 mainImage: wp-nuxt-netlify.png
@@ -12,7 +13,6 @@ tags:
 layout: post
 canonicalLink: https://dev.to/ninjasoards/easy-headless-wordpress-with-nuxt-netlify-part-ii-4ab
 ---
-## Part 2 - Nuxt & Tailwind
 
 [Part 1](https://dev.to/ninjasoards/easy-headless-wordpress-with-nuxt-netlify-5c4a) deals with **setting up Wordpress** as a Headless CMS.
 
@@ -344,5 +344,5 @@ Thanks for reading! Take a look at the source code for [midwestdesignweek.com](h
 
 If all of this **setup is too much**, or maybe you're just **in a hurry**, Netlify was a great repo made for just this purpose that you could use as a **starting point**. It was co-written by Vue Core Team member Sarah Drasner, and even has a companion article explaining its inner workings on Smashing Magazine.
 
-This article and repo were extremely helpful for me when I was getting started. (https://midwestdesignweek.com/).
-{% github netlify-labs/headless-wp-nuxt no-readme %}
+This article and repo were extremely helpful for me when I was getting started.
+[netlify-labs/headless-wp-nuxt](https://github.com/netlify-labs/headless-wp-nuxt)

@@ -1,5 +1,6 @@
 ---
 title: Building an Ecommerce Website for a Farm to Table Business
+subtitle: Representing a Unique Business Model Using Illustrations
 description: Duck Duck Beet needed a way for their customers to order online and a homepage that would clearly explain their unique business to new customers. Woocommerce and Vector Art to the rescue.
 date: 2017-11-01T18:21:39.438Z
 tags:
@@ -12,8 +13,6 @@ tags:
 layout: post
 canonicalLink: https://blog.prototypr.io/building-an-ecommerce-website-for-a-farm-to-table-business-ec3e541302a4
 ---
-
-## Representing a Unique Business Model Using Illustrations
 
 ![](./images/asset-1.jpeg)
 
@@ -88,9 +87,3 @@ Take a look at the site using the link below. And if you are in the **Louisville
 [duckduckbeetfarm.com](https://duckduckbeetfarm.com/)
 
 Thanks for reading!
-
-You can view more of my recent work by clicking the button below.
-
-[![](./images/asset-21.png)](http://davidysoards.com/)
-
----

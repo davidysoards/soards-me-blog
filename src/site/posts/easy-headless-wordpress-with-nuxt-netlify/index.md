@@ -1,6 +1,7 @@
 ---
 title: Easy Headless Wordpress with Nuxt & Netlify
-description: Setting up Wordpress as a Headless CMS
+subtitle: Setting up Wordpress
+description: Setting up Wordpress as a Headless CMS for use with Nuxt and Netlify
 date: 2020-09-12T18:06:53.883Z
 mainImage: wp-nuxt-netlify.png
 tags:
@@ -13,11 +14,9 @@ layout: post
 canonicalLink: https://dev.to/ninjasoards/easy-headless-wordpress-with-nuxt-netlify-5c4a
 ---
 
-## Part 1 - Setting up Wordpress
-
 [Part 2](https://dev.to/ninjasoards/easy-headless-wordpress-with-nuxt-netlify-part-ii-4ab) covers Vue, Nuxt and a little Tailwind.
 
-Part 3 will deal with deploying with Netlify and adding a build hook to our CMS.
+[Part 3](https://dev.to/ninjasoards/easy-headless-wordpress-with-nuxt-netlify-part-iii-341j) will deal with deploying with Netlify and adding a build hook to our CMS.
 
 Recently, I was tasked with building the **event website** for AIGA's first annual [Midwest Design Week](https://midwestdesignweek.com/).
 
@@ -275,7 +274,9 @@ function acf_to_rest_api($response, $post, $request)
 That's pretty much it for setting up Wordpress. In part 2 we will **query our data** from Vue/Nuxt and **setup auto deploys** using Netlify.
 
 Check out the **source code** for my theme and plugin. 👀
-{% github relaydesignco/mdmw-rest-plugin no-readme %}
-{% github relaydesignco/wp-headless-theme no-readme %}
+
+[relaydesignco/mdmw-rest-plugin](https://github.com/relaydesignco/mdmw-rest-plugin)
+
+[relaydesignco/wp-headless-theme](https://github.com/relaydesignco/wp-headless-theme)
 
 Thanks for reading!

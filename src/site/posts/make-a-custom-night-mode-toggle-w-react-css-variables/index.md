@@ -13,9 +13,7 @@ layout: post
 canonicalLink: https://dev.to/ninjasoards/make-a-custom-night-mode-toggle-w-react-css-variables-272o
 ---
 
-This post is the first in a short series where I will detail the things I learned while designing and developing a website to promote AIGA Louisville's annual Design Week. Please have a look and let me know what you think in the comments.
-
-[louisvilledesignweek.com](https://louisvilledesignweek.com/)
+This post is the first in a short series where I will detail the things I learned while designing and developing a website to promote AIGA Louisville's annual Design Week. [louisvilledesignweek.com](https://louisvilledesignweek.com/)
 
 Peep my [source code](https://github.com/davidysoards/louisville-design-week) 👀
 
@@ -27,7 +25,7 @@ I also believe that the best method is often the simplest method and using CSS v
 
 Alright, now onto the fun stuff.
 
-## The CSS Variables
+### The CSS Variables
 
 Step one is to set the CSS variables on the root in the global CSS file so they can be accessed anywhere in the DOM (or in this case the virtual DOM).
 
@@ -69,7 +67,7 @@ a {
 }
 ```
 
-## The JavaScript
+### The JavaScript
 
 With the variables set globally in the CSS, new values can be assigned as needed using JavaScript. I started by creating two color theme objects -- lightTheme & darkTheme -- inside my main layout.js component.
 
@@ -199,7 +197,7 @@ export default function ToggleSwitch({
 }
 ```
 
-## Styling the Toggle Switch
+### Styling the Toggle Switch
 
 As you can see I'm using CSS-in-JS 🙀 via the @emotion/styled library. If you are familiar with styled-components, it works almost exactly the same but the package is slightly smaller and apparently more performant (I haven't actually tested it, so what do I know?). Emotion also gives you the option of using css props to style components, which can be useful in certain situations.
 
@@ -309,9 +307,3 @@ const MenuButton = styled.button`
 Thanks for reading! I hope you found this informative.
 
 Next up, I will be documenting how I created the flickering Neon SVG animation.
-
-Part 2 is now available 👇
-
-{% link https://dev.to/ninjasoards/make-a-flickering-neon-svg-animation-from-scratch-w-illustrator-react-emotion-39gm %}
-
-{% github davidysoards/louisville-design-week %}

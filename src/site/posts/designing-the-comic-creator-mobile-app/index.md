@@ -1,5 +1,6 @@
 ---
 title: Designing the Comic Creator Mobile App
+subtitle: My User Centered Research & Design Process
 description: The first step in creating a page of sequential art is to draw what is called a thumbnail. A thumbnail is a small image that shows the basic panel layout of a page and the general placements of the…
 date: 2017-08-14T19:01:00.974Z
 tags:
@@ -10,8 +11,6 @@ tags:
 layout: post
 canonicalLink: https://blog.prototypr.io/designing-the-comic-creator-mobile-app-27b39ac74099
 ---
-
-## My User Centered Research & Design Process
 
 ![](./images/asset-1.png)![](./images/asset-2.png)
 
@@ -194,5 +193,3 @@ This case study was part of my capstone project for the Springboard UX Design co
 That’s all for now! Thanks for your time.
 
 \-DYS
-
-[![](./images/asset-19.png)](http://davidysoards.com)

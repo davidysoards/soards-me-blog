@@ -1,5 +1,6 @@
 ---
-title: Easy Headless Wordpress with Nuxt & Netlify part III
+title: Easy Headless Wordpress with Nuxt & Netlify III
+subtitle: Deploying on Netlify
 description: Deploying with Netlify and adding a build hook to our CMS
 date: 2020-09-16T21:50:30.483Z
 mainImage: wp-nuxt-netlify.png
@@ -12,8 +13,6 @@ tags:
 layout: post
 canonicalLink: https://dev.to/ninjasoards/easy-headless-wordpress-with-nuxt-netlify-part-iii-341j
 ---
-
-## Part 3 - Deploying on Netlify
 
 [Part 1](https://dev.to/ninjasoards/easy-headless-wordpress-with-nuxt-netlify-5c4a) deals with **setting up Wordpress** as a Headless CMS.
 
@@ -85,4 +84,4 @@ The status bar also has a **Deploy Website** button. I found this feature extrem
 
 And that's it! Our **content-managed** website built with **Vue, and Wordpress** is live and content is **updating automatically.**
 
-As always, **thanks for reading!** If you have any quesions, please ask them in the comments
+As always, **thanks for reading!**
