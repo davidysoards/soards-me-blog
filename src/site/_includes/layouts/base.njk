@@ -8,22 +8,27 @@
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="alternate" href="{{ siteData.feed.path | url }}" type="application/atom+xml" title="{{ siteData.title }}">
   <link rel="alternate" href="{{ siteData.jsonfeed.path | url }}" type="application/json" title="{{ siteData.title }}">
-  <title>{{ title }} | {{siteDate.title}}</title>
+  <title>{{ title }} | {{siteData.title}}</title>
 </head>
-  <body>
+  <body class="min-h-screen flex flex-col">
     <header class="bg-blue-700 text-white">
-      <div class="container flex p-4">
+      <div class="container flex p-4 items-center justify-between">
         <a href="{{ '/' | url }}" class="text-2xl font-bold">{{ siteData.title }}</a>
+        <ul class="grid grid-flow-col gap-4">
+          {%- for entry in collections.all | eleventyNavigation %}
+            <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
+          {%- endfor %}
+        </ul>
       </div>
     </header>
 
-    <main class="container bg-blue-200">
+    <main class="container bg-blue-200 p-4 flex-grow">
         {{ content | safe }}
     </main>
 
     <footer class="bg-blue-700 text-white">
       <div class="container p-4">
-        &#169; {{siteData.currentYear}}
+        &#169; {{siteData.currentYear}} David Soards
       </div>
     </footer>
     {% set js %}
