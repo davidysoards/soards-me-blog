@@ -77,7 +77,7 @@ module.exports = function (eleventyConfig) {
       input: 'src/site',
       output: 'dist',
     },
-    templateFormats: ['njk', 'md', 'jpg', 'png'],
+    templateFormats: ['njk', 'md', 'jpg', 'jpeg', 'png'],
     htmlTemplateEngine: 'njk',
     markdownTemplateEngine: false,
   };
