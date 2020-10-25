@@ -10,27 +10,30 @@
   <link rel="alternate" href="{{ siteData.jsonfeed.path | url }}" type="application/json" title="{{ siteData.title }}">
   <title>{{ title }} | {{siteData.title}}</title>
 </head>
-  <body class="min-h-screen flex flex-col">
-    <header class="bg-blue-700 text-white">
-      <div class="container flex p-4 items-center justify-between">
-        <a href="{{ '/' | url }}" class="text-2xl font-bold">{{ siteData.title }}</a>
-        <ul class="grid grid-flow-col gap-4">
-          {%- for entry in collections.all | eleventyNavigation %}
-            <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
-          {%- endfor %}
-        </ul>
-      </div>
-    </header>
+  <body>
+    <div class="overflow-x-hidden relative min-h-screen flex flex-col">
+      <div class="header-shape"></div>
+        <header class="bg-purple-700 text-white sticky top-0 z-50">
+          <div class="container flex flex-col items-start p-4 md:flex-row md:items-center justify-between">
+            <a href="{{ '/' | url }}" class="text-xl md:text-2xl font-bold mb-1 md:mb-0">{{ siteData.title }}</a>
+            <ul class="grid grid-flow-col gap-6 text-sm md:text-base">
+              {%- for entry in collections.all | eleventyNavigation %}
+                <li class="{% if entry.url == page.url %} font-bold{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
+              {%- endfor %}
+            </ul>
+          </div>
+        </header>
 
-    <main class="container bg-blue-200 p-4 flex-grow">
-        {{ content | safe }}
-    </main>
+        <main class="container px-4 pt-0 pb-8 flex-grow relative">
+            {{ content | safe }}
+        </main>
 
-    <footer class="bg-blue-700 text-white">
-      <div class="container p-4">
-        &#169; {{siteData.currentYear}} David Soards
-      </div>
-    </footer>
+        <footer class="bg-purple-700 text-white">
+          <div class="container p-4">
+            &#169; {{siteData.currentYear}} David Soards
+          </div>
+        </footer>
+    </div>
     {% set js %}
       {% include "js/main.js" %}
     {% endset %}

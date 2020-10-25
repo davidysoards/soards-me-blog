@@ -10,9 +10,10 @@ tags:
   - comics
 layout: post
 canonicalLink: https://blog.prototypr.io/designing-the-comic-creator-mobile-app-27b39ac74099
+mainImage: comic-creator.png
 ---
 
-![](./images/asset-1.png)![](./images/asset-2.png)
+![](./images/asset-2.png)
 
 ![I drew a comic to help explain the idea behind Comic Creator. Totally meta.](./images/asset-3.jpeg)
 

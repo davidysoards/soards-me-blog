@@ -1,11 +1,9 @@
 ---
 permalink: /tags/
-layout: default
+layout: page
 title: Tags
 ---
-<h1>Tags</h1>
-
 {% for tag in collections.tagList %}
   {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-  <a href="{{ tagUrl | url }}" class="bg-blue-500 inline-block text-white py-1 px-2 mb-2 mr-1">{{ tag }}</a>
+  <a href="{{ tagUrl | url }}" class="bg-purple-700 inline-block text-white py-1 px-2 mb-2 mr-1">{{ tag }}</a>
 {% endfor %}

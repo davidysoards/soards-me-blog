@@ -11,7 +11,7 @@ h1 {
 }
 
 h2 {
-  @apply text-3xl font-bold leading-tight;
+  @apply text-3xl leading-tight;
 }
 
 h3 {
@@ -27,7 +27,7 @@ p {
 }
 
 a {
-  @apply text-blue-700;
+  @apply text-purple-700;
 }
 
 header,
@@ -35,4 +35,19 @@ footer {
   a {
     @apply text-white;
   }
+}
+
+.header-shape {
+  top: -6rem;
+  background-image: url('/img/header-shape.svg');
+  width: 2560px;
+  height: 500px;
+  bottom: 0;
+  left: 50%;
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 0;
+  transform: translateX(-50%);
+  background-repeat: no-repeat;
 }

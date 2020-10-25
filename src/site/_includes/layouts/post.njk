@@ -1,7 +1,8 @@
 ---
 layout: default
 ---
-<div class="max-w-screen-lg mx-auto mb-8">
+<div class="max-w-screen-md mx-auto mb-8">
+  <img class="mb-2" src="/img/{{ mainImage }}" alt="">
   <h1>{{ title }}</h1>
   <h2>{{ subtitle }}</h2>
 </div>
@@ -10,9 +11,9 @@ layout: default
   {{ content | safe }}
 </div>
 
-<ul class="mt-8 pb-4">
+<ul class="mt-12 pb-4 text-xs lg:text-sm">
   {%- set previousPost = collections.post | getPreviousCollectionItem(page) %}
-  {%- if previousPost %}<li>Previous: <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></li>{% endif %}
+  {%- if previousPost %}<li class="mb-4 lg:mb-0">Previous: <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></li>{% endif %}
   {%- set nextPost = collections.post | getNextCollectionItem(page) %}
-  {%- if nextPost %}<li>Next: <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a></li>{% endif %}
+  {%- if nextPost %}<li class="lg:text-right">Next: <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a></li>{% endif %}
 </ul>

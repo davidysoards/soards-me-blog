@@ -12,9 +12,8 @@ tags:
   - wordPress
 layout: post
 canonicalLink: https://blog.prototypr.io/building-an-ecommerce-website-for-a-farm-to-table-business-ec3e541302a4
+mainImage: farm-to-table.jpeg
 ---
-
-![](./images/asset-1.jpeg)
 
 Jared Wilkinson has a very unique business. He is a trained chef with 18 years experience. Several years ago, he fell in love with farming as well. Instead of just selling his homegrown produce, he began turning his harvest into fully prepared meals.
 
