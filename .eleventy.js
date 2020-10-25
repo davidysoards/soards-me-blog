@@ -7,6 +7,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addLayoutAlias('default', 'layouts/base.njk');
   eleventyConfig.addLayoutAlias('post', 'layouts/post.njk');
   eleventyConfig.addLayoutAlias('page', 'layouts/page.njk');
+  eleventyConfig.addLayoutAlias('about', 'layouts/about.njk');
 
   // Minify js files
   eleventyConfig.addFilter('jsmin', (code) => {
