@@ -1,20 +1,31 @@
 ---
 pagination:
   data: collections
+  addAllPagesToCollections: true
   size: 1
   alias: tag
   filter:
     - all
+    - nav
     - post
+    - posts
     - tagList
+layout: page
 permalink: /tags/{{ tag }}/
-layout: default
-title: Tagged
+eleventyComputed:
+  title: Tagged “{{ tag }}”
 ---
-<h1 class="mb-4">Tagged “{{ tag }}”</h1>
+
+{% set postslist = collections[ tag ] %}
+
 <ol>
-{% set taglist = collections[ tag ] %}
-{% for post in taglist | reverse %}
-  <li><a href="{{ post.url | url }}">{{ post.data.title }}</a></li>
+{% for post in postslist | reverse %}
+  <li class="mb-2">
+    <a href="{{ post.url | url }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+    <time datetime="{{ post.date | htmlDateString }}">{{ post.date | formatDate }}</time>
+  </li>
 {% endfor %}
+</ol>
+
+<p class="mt-8">See <a href="{{ '/tags/' | url }}">all tags</a>.</p>
 </ol>

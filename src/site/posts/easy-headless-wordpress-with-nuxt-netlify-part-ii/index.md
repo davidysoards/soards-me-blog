@@ -8,6 +8,7 @@ tags:
   - post
   - wordpress
   - vue
+  - javascript
   - nuxt
   - netlify
 layout: post

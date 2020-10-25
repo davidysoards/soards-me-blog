@@ -9,7 +9,7 @@ tags:
   - illustration
   - ux
   - ecommerce
-  - wordPress
+  - wordpress
 layout: post
 canonicalLink: https://blog.prototypr.io/building-an-ecommerce-website-for-a-farm-to-table-business-ec3e541302a4
 mainImage: farm-to-table.jpeg

@@ -1,10 +1,17 @@
 ---
 layout: default
 ---
-<div class="max-w-screen-md mx-auto mb-8">
+{%- set postTags = tags| removePost(tags) %}
+<div class="max-w-header mx-auto mb-8">
   <img class="mb-2" src="/img/{{ mainImage }}" alt="">
   <h1>{{ title }}</h1>
   <h2>{{ subtitle }}</h2>
+  <div class="mt-4">
+    {%- for tag in postTags %}
+      {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+      <a href="{{ tagUrl | url }}" class="bg-purple-700 inline-block text-white py-1 px-2 mb-2 mr-1">{{ tag }}</a>
+    {%- endfor %}
+  </div>
 </div>
 
 <div class="max-w-text mx-auto">

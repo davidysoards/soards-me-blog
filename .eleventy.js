@@ -1,6 +1,7 @@
 const { DateTime } = require('luxon');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const navigation = require('@11ty/eleventy-navigation');
+const pluginRss = require('@11ty/eleventy-plugin-rss');
 
 module.exports = function (eleventyConfig) {
   // Layout aliases
@@ -33,6 +34,12 @@ module.exports = function (eleventyConfig) {
     return DateTime.fromJSDate(dateObj, {
       zone: 'America/New_York',
     }).toFormat('LLLL d, y');
+  });
+  eleventyConfig.addFilter('htmlDateString', (dateObj) => {
+    return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy-LL-dd');
+  });
+  eleventyConfig.addFilter('removePost', (tags) => {
+    return tags.filter((tag) => tag !== 'post');
   });
 
   eleventyConfig.addCollection('tagList', function (collection) {
@@ -67,6 +74,7 @@ module.exports = function (eleventyConfig) {
   // Code Syntax Highlighting
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(navigation);
+  eleventyConfig.addPlugin(pluginRss);
 
   // Pass thru static files
   eleventyConfig.addPassthroughCopy('./src/site/css');

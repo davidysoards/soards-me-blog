@@ -32,6 +32,7 @@ module.exports = {
       // },
       maxWidth: {
         text: '65ch',
+        header: '45rem',
       },
     },
   },

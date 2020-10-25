@@ -7,6 +7,7 @@ mainImage: wp-nuxt-netlify.png
 tags:
   - post
   - wordpress
+  - php
   - vue
   - nuxt
   - netlify

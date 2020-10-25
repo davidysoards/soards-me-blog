@@ -6,6 +6,7 @@ mainImage: always-open-night.png
 tags:
   - post
   - react
+  - javascript
   - css
   - svg
   - animation
