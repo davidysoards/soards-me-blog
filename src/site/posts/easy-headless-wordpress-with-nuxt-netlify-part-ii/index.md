@@ -15,9 +15,9 @@ layout: post
 canonicalLink: https://dev.to/ninjasoards/easy-headless-wordpress-with-nuxt-netlify-part-ii-4ab
 ---
 
-[Part 1](https://dev.to/ninjasoards/easy-headless-wordpress-with-nuxt-netlify-5c4a) deals with **setting up Wordpress** as a Headless CMS.
+[Part 1](/posts/easy-headless-wordpress-with-nuxt-netlify) deals with **setting up Wordpress** as a Headless CMS.
 
-[Part 3](https://dev.to/ninjasoards/easy-headless-wordpress-with-nuxt-netlify-part-iii-341j) covers **deploying with Netlify** and adding a **build hook** to our CMS.
+[Part 3](/posts/easy-headless-wordpress-with-nuxt-netlify-part-iii) covers **deploying with Netlify** and adding a **build hook** to our CMS.
 
 Now that the JSON API endpoints are setup, the data from our Wordpress posts and media files can be **queried, manipulated and rendered to static HTML files** using Vue and Nuxt.
 
@@ -239,12 +239,6 @@ Now we can use the data in the **component's template.**
           <h3 class="lg:text-2xl font-bold mb-2">
             {{ event.acf.speaker }}
           </h3>
-          <!-- <time class="lg:text-3xl font-mono">
-            {{ $dateFns.format(new Date(event.acf.start), 'E h') }}-{{
-              $dateFns.format(new Date(event.acf.end), 'haaaaa')
-            }}
-            ET
-          </time> -->
           <time class="text-sm lg:text-lg font-mono block mb-2">
             {{ event.acf.start_time }} - {{ event.acf.end_time }}
           </time>

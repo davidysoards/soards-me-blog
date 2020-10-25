@@ -14,9 +14,9 @@ layout: post
 canonicalLink: https://dev.to/ninjasoards/easy-headless-wordpress-with-nuxt-netlify-part-iii-341j
 ---
 
-[Part 1](https://dev.to/ninjasoards/easy-headless-wordpress-with-nuxt-netlify-5c4a) deals with **setting up Wordpress** as a Headless CMS.
+[Part 1](/posts/easy-headless-wordpress-with-nuxt-netlify-5c4a) deals with **setting up Wordpress** as a Headless CMS.
 
-[Part 2](https://dev.to/ninjasoards/easy-headless-wordpress-with-nuxt-netlify-part-ii-4ab) covers **Vue, Nuxt and Tailwind**.
+[Part 2](/posts/easy-headless-wordpress-with-nuxt-netlify-part-ii-4ab) covers **Vue, Nuxt and Tailwind**.
 
 Deploying your project to the web from a git repo is ridiculously easy using Netlify. I'm going to assume you are familiar with Github and have been committing your work from Parts 1 and 2 of this series.
 

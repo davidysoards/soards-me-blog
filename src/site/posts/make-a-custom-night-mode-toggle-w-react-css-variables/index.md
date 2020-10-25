@@ -17,7 +17,7 @@ This post is the first in a short series where I will detail the things I learne
 
 Peep my [source code](https://github.com/davidysoards/louisville-design-week) 👀
 
-[Part 2: Animated Neon SVG](https://dev.to/ninjasoards/make-a-flickering-neon-svg-animation-from-scratch-w-illustrator-react-emotion-39gm)
+[Part 2: Animated Neon SVG](/posts/make-a-flickering-neon-svg-animation-from-scratch-w-illustrator-react-emotion-39gm)
 
 I tried a couple other methods to achieve this effect that involved using React's Context API before settling on simple CSS variables. The trouble I ran into using Context was that it simply triggered a re-render and switched the theme colors immediately without applying a transition animation.
 
