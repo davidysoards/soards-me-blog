@@ -11,6 +11,6 @@ I am a Developer with a background in design and audio production and a BSBA in 
 
 I'm currently working on improving my full-stack development skills with Python and the Django Framework.
 
-I built this blog using [Eleventy](https://www.11ty.dev/docs/) and [Tailwind](https://tailwindcss.com/docs/installation). They're both fairly easy to use, highly customizable and a lot of fun if you’re a nerd like me. You should definitely check them out.
+I built this blog using <a href="https://www.11ty.dev/docs/" target="_blank" rel="noopener noreferrer">Eleventy</a> and <a href="https://tailwindcss.com/docs/installation" target="_blank" rel="noopener noreferrer">Tailwind</a>. They're both fairly easy to use, highly customizable and a lot of fun, if you’re a nerd like me. You should definitely check them out.
 
 From time to time, I post music on my [Soundcloud](https://soundcloud.com/soards).
