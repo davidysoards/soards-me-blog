@@ -1,0 +1,30 @@
+---
+permalink: "{{ siteData.jsonfeed.path }}"
+eleventyExcludeFromCollections: true
+---
+{
+  "version": "https://jsonfeed.org/version/1",
+  "title": "{{ siteData.title }}",
+  "home_page_url": "{{ siteData.url }}",
+  "feed_url": "{{ siteData.jsonfeed.url }}",
+  "description": "{{ siteData.description }}",
+  "author": {
+    "name": "{{ siteData.author.name }}",
+    "url": "{{ siteData.author.url }}"
+  },
+  "items": [
+    {%- for post in collections.post | reverse %}
+    {%- set absolutePostUrl %}{{ post.url | url | absoluteUrl(siteData.url) }}{% endset -%}
+    {
+      "id": "{{ absolutePostUrl }}",
+      "url": "{{ absolutePostUrl }}",
+      "title": "{{ post.data.title }}",
+      "content_html": {% if post.templateContent %}{{ post.templateContent | dump | safe }}{% else %}""{% endif %},
+      "date_published": "{{ post.date | rssDate }}"
+    }
+    {%- if not loop.last -%}
+    ,
+    {%- endif -%}
+    {%- endfor %}
+  ]
+}

@@ -20,13 +20,13 @@ module.exports = {
     content: ['./src/site/**/*.njk'],
   },
   theme: {
-    fontFamily: {
-      sans: ['Open Sans', ...defaultTheme.fontFamily.sans],
-    },
     container: {
       center: true,
     },
     extend: {
+      fontFamily: {
+        sans: ['Open Sans', ...defaultTheme.fontFamily.sans],
+      },
       // screens: {
       //   2xl: '1536px',
       // },
