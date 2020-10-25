@@ -20,7 +20,7 @@ This is Part 2 in a short series where I am detailing the things I learned while
 
 Peep my [source code](https://github.com/davidysoards/louisville-design-week) 👀
 
-[Part 1: Night Mode Toggle](/posts/make-a-custom-night-mode-toggle-w-react-css-variables-272o)<!-- TODO -->
+[Part 1: Night Mode Toggle](/posts/make-a-custom-night-mode-toggle-w-react-css-variables)
 
 ### Create & Export the SVG
 
@@ -141,7 +141,7 @@ _The \<defs\> element is used to define elements that you want to reuse later. D
 </defs>
 ```
 
-In order to reuse the paths multiple times but assign different filters, fills and transitions to them as needed, I place them inside the **\<defs\> element** as well and then call them by their id inside **\<use\> elements**. The fills are assigned to CSS variables and the colors will change upon clicking the toggle switch in the header. The length of the **transitions** and the **ease** values are set by the **style attributes**. The setup for the variables and the dark mode switch is described in [part 1](/posts/make-a-custom-night-mode-toggle-w-react-css-variables-272o) of this series.
+In order to reuse the paths multiple times but assign different filters, fills and transitions to them as needed, I place them inside the **\<defs\> element** as well and then call them by their id inside **\<use\> elements**. The fills are assigned to CSS variables and the colors will change upon clicking the toggle switch in the header. The length of the **transitions** and the **ease** values are set by the **style attributes**. The setup for the variables and the dark mode switch is described in [part 1](/posts/make-a-custom-night-mode-toggle-w-react-css-variables) of this series.
 
 ```jsx
 <use xlinkHref="#always-open" filter="url(#shadow)" />
