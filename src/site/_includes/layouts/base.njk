@@ -15,10 +15,10 @@
       <div class="header-shape"></div>
         <header class="bg-purple-700 text-white sticky top-0 z-50">
           <div class="container flex flex-col items-start p-4 md:flex-row md:items-center justify-between">
-            <a href="{{ '/' | url }}" class="text-xl md:text-2xl font-bold mb-1 md:mb-0">{{ siteData.title }}</a>
+            <a href="{{ '/' | url }}" class="text-2xl mb-1 md:mb-0">{{ siteData.title }}</a>
             <ul class="grid grid-flow-col gap-6 text-sm md:text-base">
               {%- for entry in collections.all | eleventyNavigation %}
-                <li class="{% if entry.url == page.url %} font-bold{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
+                <li><a href="{{ entry.url | url }}" class="{% if entry.url == page.url %}font-bold{% else %}font-light{% endif %}">{{ entry.title }}</a></li>
               {%- endfor %}
             </ul>
           </div>
@@ -28,7 +28,7 @@
             {{ content | safe }}
         </main>
 
-        <footer class="bg-purple-700 text-white">
+        <footer class="bg-purple-700 text-white text-xs font-light">
           <div class="container p-4">
             &#169; {{siteData.currentYear}} David ⚔️ Soards
           </div>

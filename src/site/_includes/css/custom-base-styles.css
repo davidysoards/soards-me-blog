@@ -11,7 +11,7 @@ h1 {
 }
 
 h2 {
-  @apply text-3xl leading-tight;
+  @apply text-3xl leading-tight font-thin;
 }
 
 h3 {
@@ -27,7 +27,7 @@ p {
 }
 
 a {
-  @apply text-purple-700;
+  @apply text-purple-700 font-semibold;
 }
 
 header,

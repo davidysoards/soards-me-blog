@@ -24,20 +24,11 @@ module.exports = {
       center: true,
     },
     extend: {
-      fontFamily: {
-        sans: ['Open Sans', ...defaultTheme.fontFamily.sans],
-      },
-      // screens: {
-      //   2xl: '1536px',
-      // },
       maxWidth: {
         text: '65ch',
         header: '45rem',
       },
     },
-  },
-  variants: {
-    // opacity: ({ after }) => after(['disabled']),
   },
   plugins: [],
 };
