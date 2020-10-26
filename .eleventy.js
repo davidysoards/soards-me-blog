@@ -22,7 +22,7 @@ module.exports = function (eleventyConfig) {
   });
 
   // Minify the HTML in prod
-  if (process.env.NODE_ENV == 'production') {
+  if (process.env.NODE_ENV === 'production') {
     eleventyConfig.addTransform(
       'htmlmin',
       require('./src/utils/minify-html.js')
