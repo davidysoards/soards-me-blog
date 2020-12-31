@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="/img/favicon.ico" type="image/vnd.microsoft.icon">
   <meta name="description" content="{{ description or siteData.description }}">
+  <meta property="og:title" content="{{ title or siteData.title  }}"/>
+  <meta property="og:description" content="{{ description or siteData.description }}" />
+  <meta property="og:image" content="{{ '/img/og-image.png' | absoluteUrl(siteData.url) }}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="{{ page.url | absoluteUrl(siteData.url) }}" />
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="alternate" href="{{ siteData.feed.path | url }}" type="application/atom+xml" title="{{ siteData.title }}">
   <link rel="alternate" href="{{ siteData.jsonfeed.path | url }}" type="application/json" title="{{ siteData.title }}">
