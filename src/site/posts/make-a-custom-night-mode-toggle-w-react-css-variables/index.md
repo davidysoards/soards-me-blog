@@ -13,7 +13,7 @@ layout: post
 canonicalLink: https://dev.to/ninjasoards/make-a-custom-night-mode-toggle-w-react-css-variables-272o
 ---
 
-This post is the first in a short series where I will detail the things I learned while designing and developing a website to promote AIGA Louisville's annual Design Week. [louisvilledesignweek.com](https://louisvilledesignweek.com/)
+This post is the first in a short series where I will detail the things I learned while designing and developing a website to promote AIGA Louisville's annual Design Week. [louisvilledesignweek.com](https://louisvilledesignweek2019.netlify.app/)
 
 Peep my [source code](https://github.com/davidysoards/louisville-design-week) 👀
 

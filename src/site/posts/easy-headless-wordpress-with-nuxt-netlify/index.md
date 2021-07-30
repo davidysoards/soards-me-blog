@@ -19,7 +19,7 @@ canonicalLink: https://dev.to/ninjasoards/easy-headless-wordpress-with-nuxt-netl
 
 [Part 3](/posts/easy-headless-wordpress-with-nuxt-netlify-part-iii) will deal with deploying with Netlify and adding a build hook to our CMS.
 
-Recently, I was tasked with building the **event website** for AIGA's first annual [Midwest Design Week](https://midwestdesignweek.com/).
+Recently, I was tasked with building the **event website** for AIGA's first annual [Midwest Design Week](https://midwestdesignweek2020.netlify.app/).
 
 Last year, I built the site for AIGA Louisville's Design Week using **Gatsby** and a handful of **markdown files**. The content was really only editable by myself or another developer, and that was fine at the time. (I wrote a couple articles about the experience [here](/posts/make-a-custom-night-mode-toggle-w-react-css-variables) and [here](/posts/make-a-flickering-neon-svg-animation-from-scratch-w-illustrator-react-emotion).
 

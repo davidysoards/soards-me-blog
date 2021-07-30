@@ -333,7 +333,7 @@ Our Vue JS page **rendered with content** from the Wordpress JSON API is looking
 
 In Part 3 we will **deploy our Nuxt app to Netlify** and add a **build hook** so we can rebuild our site anytime **new content is published.**
 
-Thanks for reading! Take a look at the source code for [midwestdesignweek.com](https://midwestdesignweek.com/). 👀
+Thanks for reading! Take a look at the source code for [midwestdesignweek.com](https://midwestdesignweek2020.netlify.app/). 👀
 
 {% github relaydesignco/design-week-2020-nuxt no-readme %}
 

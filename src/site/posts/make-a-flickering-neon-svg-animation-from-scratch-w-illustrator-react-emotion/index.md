@@ -16,7 +16,7 @@ canonicalLink: https://dev.to/ninjasoards/make-a-flickering-neon-svg-animation-f
 
 This is Part 2 in a short series where I am detailing the things I learned while designing and developing a website to promote AIGA Louisville's annual Design Week.
 
-[louisvilledesignweek.com](https://louisvilledesignweek.com/)
+[louisvilledesignweek.com](https://louisvilledesignweek2019.netlify.app/)
 
 Peep my [source code](https://github.com/davidysoards/louisville-design-week) 👀
 
